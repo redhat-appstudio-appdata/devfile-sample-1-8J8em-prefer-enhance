@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-sample-t35k
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-user-workloads/rsoaresd-tenant/devfile-sample-1/devfile-sample-t35k@sha256:81b089dc6a14017c9f70ab94af2e4b39db510b5156ecdf63eeaa036f925ea2ad
+        name: my-nodejs
+        resources: {}
+status: {}
