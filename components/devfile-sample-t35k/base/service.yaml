@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-t35k
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-t35k
+    app.kubernetes.io/part-of: devfile-sample-1
+  name: devfile-sample-t35k
+spec:
+  ports:
+  - name: http-3001
+    port: 3001
+    protocol: TCP
+    targetPort: 3001
+  selector:
+    app: nodejs-app
+    app.kubernetes.io/instance: devfile-sample-t35k
+status:
+  loadBalancer: {}
